@@ -4,3 +4,7 @@ _site
 **.lock
 .stack-work
 **.hi
+
+dist
+generated
+.direnv
