@@ -1,4 +1,4 @@
-#import "tkf.typ": *
+#import "../tkf.typ": *
 #kt-note(id: "notes/notes/2026-03-02-typst-knowledge-forests.typ", title: "typst-knowledge-forests", tags: (), author: "Cjen1", date: "2026-03-02", api => [
 #let transclude = api.transclude
 
