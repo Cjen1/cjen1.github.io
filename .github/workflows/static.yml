@@ -40,6 +40,9 @@ jobs:
       - name: Copy site.css to dist
         run: cp site.css dist/site.css
 
+      - name: echo cname
+        run: echo www.jentek.dev > dist/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
