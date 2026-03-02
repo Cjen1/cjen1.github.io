@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#kt-note(id: "notes/paper-reviews/2020-10-27-ironfleet.typ", title: "Ironfleet: Proving Practical Distributed Systems Correct", tags: ("papers", "distributed-systems", "verification"), author: "", date: "2020-10-27", api => [
+#kt-note(id: "notes/paper-reviews/2020-10-27-ironfleet.typ", title: "Ironfleet: Proving Practical Distributed Systems Correct", tags: ("papers", "distributed-systems", "verification"), author: "Cjen1", date: "2020-10-27", api => [
 
 = Overview
 

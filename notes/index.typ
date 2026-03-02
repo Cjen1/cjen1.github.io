@@ -1,5 +1,5 @@
 #import "tkf.typ": *
-#kt-note(id: "notes/index.typ", title: "Jentek.dev", tags: (), author: "", date: "2026-02-25", api => [
+#kt-note(id: "notes/index.typ", title: "Jentek.dev", tags: (), author: "Cjen1", date: "2026-02-25", api => [
   #let transclude = api.transclude
 
   Welcome to my forest of notes.
