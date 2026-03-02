@@ -10,11 +10,14 @@
   For me this means ensuring reliability by solving a problem in the simplest possible way.
 
   I'm currently working for Microsoft as a research engineer on the #link("https://github.com/microsoft/CCF")[CCF project] which can be summarised as a sensible distributed confidential ledger using TEEs.
+
+  I am on #link("https://github.com/cjen1")[Github] and #link("https://discuss.systems/@Cjen1")[Mastodon].
   
   = Notes
 
   #transclude("notes/notes/index.typ", mode: "title-link")
   #transclude("notes/paper-reviews/index.typ", mode: "title-link")
+  #transclude("notes/tools/index.typ", mode: "title-link")
 
   This project is built using my #link("https://github.com/cjen1/typst-knowledge-forests")[TKF (Typst knowledge forests)] tool which is based on #link("https://sr.ht/~jonsterling/forester/")[Jon Sterling's forester].
 ])
