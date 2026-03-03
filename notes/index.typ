@@ -15,9 +15,9 @@
   
   = Notes
 
+  #transclude("tools/index.typ", mode: "title-link")
   #transclude("notes/index.typ", mode: "title-link")
   #transclude("paper-reviews/index.typ", mode: "title-link")
-  #transclude("tools/index.typ", mode: "title-link")
 
   This project is built using my #link("https://github.com/cjen1/typst-knowledge-forests")[TKF (Typst knowledge forests)] tool which is based on #link("https://sr.ht/~jonsterling/forester/")[Jon Sterling's forester].
 ])
