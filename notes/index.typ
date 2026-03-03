@@ -1,5 +1,5 @@
 #import "tkf.typ": *
-#kt-note(id: "notes/index.typ", title: "Jentek.dev", tags: (), author: "Cjen1", date: "2026-02-25", api => [
+#kt-note(id: "index.typ", title: "Jentek.dev", tags: (), author: "Cjen1", date: "2026-02-25", api => [
   #let transclude = api.transclude
 
   Welcome to my forest of notes.
@@ -15,9 +15,9 @@
   
   = Notes
 
-  #transclude("notes/notes/index.typ", mode: "title-link")
-  #transclude("notes/paper-reviews/index.typ", mode: "title-link")
-  #transclude("notes/tools/index.typ", mode: "title-link")
+  #transclude("notes/index.typ", mode: "title-link")
+  #transclude("paper-reviews/index.typ", mode: "title-link")
+  #transclude("tools/index.typ", mode: "title-link")
 
   This project is built using my #link("https://github.com/cjen1/typst-knowledge-forests")[TKF (Typst knowledge forests)] tool which is based on #link("https://sr.ht/~jonsterling/forester/")[Jon Sterling's forester].
 ])

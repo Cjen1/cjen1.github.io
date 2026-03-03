@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#kt-note(id: "notes/paper-reviews/2020-10-22-i4.typ", title: "I4: Incremental Inference of Inductive Invariants for Verification of Distributed Protocols", tags: ("papers", "distributed-systems", "verification"), author: "Cjen1", date: "2020-10-22", api => [
+#kt-note(id: "paper-reviews/2020-10-22-i4.typ", title: "I4: Incremental Inference of Inductive Invariants for Verification of Distributed Protocols", tags: ("papers", "distributed-systems", "verification"), author: "Cjen1", date: "2020-10-22", api => [
 
 = Overview
 

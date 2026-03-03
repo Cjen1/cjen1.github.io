@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#kt-note(id: "notes/notes/2026-02-25-tapestry-lawns.typ", title: "Tapestry Lawns", tags: ("gardening", "t-lawns"), author: "Cjen1", date: "2026-02-25", api => [
+#kt-note(id: "notes/2026-02-25-tapestry-lawns.typ", title: "Tapestry Lawns", tags: ("gardening", "t-lawns"), author: "Cjen1", date: "2026-02-25", api => [
 
   = Takeaways
   - Mowing frequently (3-4 times per year) provides biodiversity and ensures 'lawn-like'
