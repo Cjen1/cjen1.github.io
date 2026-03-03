@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#kt-note(id: "notes/2026-02-25-panel-glue-ups.typ", title: "Wood panel glue ups", tags: ("woodworking"), author: "Cjen1", date: "2026-02-25", api => [
+#tkf-note(id: "notes/2026-02-25-panel-glue-ups.typ", title: "Wood panel glue ups", tags: ("woodworking"), author: "Cjen1", date: "2026-02-25", api => [
 = Checks
   - Check square
   - Check alignment before glue-up

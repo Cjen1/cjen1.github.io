@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#kt-note(id: "notes/2026-03-02-uk-insurance.typ", title: "uk-insurance", tags: (), author: "", date: "2026-03-02", api => [
+#tkf-note(id: "notes/2026-03-02-uk-insurance.typ", title: "uk-insurance", tags: (), author: "", date: "2026-03-02", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 
