@@ -9,7 +9,7 @@ Important docs: stock 1099, pay slips.
 
 I also have #link("https://github.com/cjen1/monzo-us-tax-scripts")[scripts to get info from monzo csvs].
 
-## Stock Awards
+== Stock Awards
 
 Kinda crazily calculated but it works out.
 The award itself is taxable income.
