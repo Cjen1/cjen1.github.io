@@ -3,6 +3,7 @@
   #let transclude = api.transclude
   = Programming
   #transclude("2026-03-05-automerge.typ", mode: "title-link")
+  #transclude("ai/index.typ", mode: "title-link")
 
   = Hobbies
   #transclude("2026-02-25-tapestry-lawns.typ", mode: "title-link")
