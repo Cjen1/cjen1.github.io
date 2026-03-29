@@ -17,27 +17,36 @@ Additionally by virtue of expressing a single idea, they tend to be scrappier - 
 
 = Implementation
 
-The desired UX is that a user can write a note, and `#transclude` in other notes.
-Additionally notes should maintain backlinks to where they are called from.
+The target is for a user to be able to open a note and transclude other notes in.
+The problem is that this immediately becomes a metadata nightmare.
 
-== The two pass system
+== Embeddings
 
-We use two passes for every file.
-The aim of the first pass is to generate `generated/manifest.json` which is a simple mapping from id to file, and `generated/metadata.json` which is arbitrary metadata about the system.
-Then the second pass takes a single `note.typ` file and the manifest and metadata, and uses the manifest to look up the bodies of files to transclude, while the metadata is used to construct backlinks.
+This will eventually be transcluded in but in the meantime:
 
-== Infinite inclusion
-The first problem is that using `#include` directly requires that the forest is a DAG which cannot be guaranteed.
-Specifically typst eagerly evaluates an included file and hence barfs whenever it hits a cyclic include.
+When doing metaprogramming, one common technique is to embed a DSL into another language.
+Specifically for tagless-final embeddings if you provide the type of the environment/eval function, then you can write the DSL using that.
 
-So the first problem is to make the body of a note lazily evaluated.
+== The API arg
 
-This is done by wrapping the text in a lambda:
-```
-tkf-note(..., _ => [
-  #transclude(...)
-])
-```
+Every note is thus a function from an API to a content block. 
 
-Rendering then becomes extracting and evaluating this lambda, and also allows for depth limited evaluation.
+This means that we can do two separate evaluation passes, one to shallowly evaluate the note and record metadata, and one to draw the rest of the fucking owl. 
+
+This means that the actual note has an extremely rich and extensible metadata environment. 
+On a more practical note this means that we can have depth tracking of transcluded preventing infinite cycles etc.
+
+= Fighting with Typst
+
+== Rendering engine
+
+Typst does not like impure functions.
+The only thing it does give you is a "context" which in practice is a monadic wrapper.
+*Except* that wrapper is only for content, and so breaks horribly whenever you start evaluating it multiple times etc. 
+
+== Cyclic includes
+
+Typst only allows you to include each file at most once. 
+So dynamic loading of files is a huge program. 
+Instead we load everything at once (all the note lambdas) and then evaluate them dynamically.
 ])
