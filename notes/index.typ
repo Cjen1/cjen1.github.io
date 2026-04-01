@@ -13,6 +13,13 @@
 
   I am on #link("https://github.com/cjen1")[Github] and #link("https://discuss.systems/@Cjen1")[Mastodon].
 
+  
+  = Notes
+
+  #transclude("tools/index.typ", mode: "title-link")
+  #transclude("notes/index.typ", mode: "title-link")
+  #transclude("paper-reviews/index.typ", mode: "title-link")
+
   #let dumped-links = (
     api.metadata
       .filter(entry => entry.func == "metadata" and entry.value.schema == "tkf-meta-v1" and entry.value.kind == "linkdump")
@@ -33,12 +40,6 @@
       - #link(url)[#if title == none { url } else { title }] (#entry.at("date", default: ""))
     ]
   ]
-  
-  = Notes
-
-  #transclude("tools/index.typ", mode: "title-link")
-  #transclude("notes/index.typ", mode: "title-link")
-  #transclude("paper-reviews/index.typ", mode: "title-link")
 
   This project is built using my #link("https://github.com/cjen1/typst-knowledge-forests")[TKF (Typst knowledge forests)] tool which is based on #link("https://sr.ht/~jonsterling/forester/")[Jon Sterling's forester].
 ])
