@@ -8,3 +8,5 @@ _site
 dist
 generated
 .direnv
+.worktrees
+docs/superpowers/
