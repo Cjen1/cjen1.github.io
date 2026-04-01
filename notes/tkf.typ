@@ -86,46 +86,52 @@
       if source == "" { [] } else { tkf-edge(source, id, "transclude", mode: mode) }
     }
   } else {
-    html.elem("tkf-transclusion")[
+    let title = {
+      let notes = tkf-metadata.filter(entry =>
+        entry.func == "metadata" and
+        entry.value.schema == "tkf-meta-v1" and
+        entry.value.kind == "note" and
+        entry.value.data.id == id
+      )
+      if notes.len() > 0 { notes.first().value.data.title } else { id }
+    }
+    let title-bar = (link-text) => [
       #html.elem("tkf-transclusion-title-div")[
-        #html.elem("tkf-transclusion-title")[
-          #{
-            let notes = tkf-metadata.filter(entry =>
-              entry.func == "metadata" and
-              entry.value.schema == "tkf-meta-v1" and
-              entry.value.kind == "note" and
-              entry.value.data.id == id
-            )
-            if notes.len() > 0 { notes.first().value.data.title } else { id }
-          }
-        ]
-        #html.elem("tkf-transclusion-link")[#tkf-notelink-canonical(id)]
+        #html.elem("tkf-transclusion-title")[#title]
+        #html.elem("tkf-transclusion-link")[#link-text]
       ]
-      #{
-        if depth > 0 {
-          if mode == "inline" {
-            context {
-              let reg = tkf-registry.get()
-              if id in reg {
-                html.elem("tkf-transclusion-inline")[
-                  #{
-                    let body-fn = reg.at(id)
-                    let target-dir = note-dir(id)
-                    body-fn((
-                      transclude: (target, ..args) => tkf-transclude-canonical(resolve-path(target-dir, target), depth: depth - 1, ..args),
-                      notelink: (target, ..args) => tkf-notelink-canonical(resolve-path(target-dir, target), ..args),
-                      metadata: tkf-metadata,
-                      manifest: tkf-manifest,
-                    ))
-                  }
-                ]
-              } else {
-                [Unknown transclusion target: #id]
+    ]
+    html.elem("tkf-transclusion", attrs: if mode == "title-link" { (data-mode: "title-link",) } else { (:) })[
+      #if mode == "title-link" {
+        tkf-notelink-canonical(id, text: title-bar(id))
+      } else {
+        title-bar(tkf-notelink-canonical(id))
+        {
+          if depth > 0 {
+            if mode == "inline" {
+              context {
+                let reg = tkf-registry.get()
+                if id in reg {
+                  html.elem("tkf-transclusion-inline")[
+                    #{
+                      let body-fn = reg.at(id)
+                      let target-dir = note-dir(id)
+                      body-fn((
+                        transclude: (target, ..args) => tkf-transclude-canonical(resolve-path(target-dir, target), depth: depth - 1, ..args),
+                        notelink: (target, ..args) => tkf-notelink-canonical(resolve-path(target-dir, target), ..args),
+                        metadata: tkf-metadata,
+                        manifest: tkf-manifest,
+                      ))
+                    }
+                  ]
+                } else {
+                  [Unknown transclusion target: #id]
+                }
               }
             }
+          } else {
+            tkf-notelink-canonical(id)
           }
-        } else {
-          tkf-notelink-canonical(id)
         }
       }
     ]

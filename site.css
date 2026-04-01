@@ -52,6 +52,19 @@ a:hover {
   text-decoration: underline;
 }
 
+tkf-transclusion[data-mode="title-link"] > a {
+  display: block;
+  color: inherit;
+}
+
+tkf-transclusion[data-mode="title-link"] > a:hover {
+  text-decoration: none;
+}
+
+tkf-transclusion[data-mode="title-link"] > a:hover tkf-transclusion-title {
+  text-decoration: underline;
+}
+
 /* Transclusion styles */
 tkf-transclusion {
   display: block;
