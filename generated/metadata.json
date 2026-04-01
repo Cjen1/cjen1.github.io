@@ -1,0 +1,704 @@
+[
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "index.typ",
+        "title": "Jentek.dev",
+        "tags": [],
+        "author": "Cjen1",
+        "date": "2026-02-25"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "index.typ",
+        "to": "tools/index.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "index.typ",
+        "to": "notes/index.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "index.typ",
+        "to": "paper-reviews/index.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "linkdump.typ",
+        "title": "Linkdump",
+        "tags": [
+          "links",
+          "data"
+        ],
+        "author": "Cjen1",
+        "date": "2026-04-01"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://github.com/cjen1/typst-knowledge-forests",
+        "date": "2026-03-01",
+        "title": "typst-knowledge-forests",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://sr.ht/~jonsterling/forester/",
+        "date": "2026-03-02",
+        "title": "Forester",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://github.com/cjen1/excali-present",
+        "date": "2026-03-03",
+        "title": "Excali-Present",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://automerge.org",
+        "date": "2026-03-04",
+        "title": "Automerge",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://github.com/cjen1/monzo-us-tax-scripts",
+        "date": "2026-03-05",
+        "title": "monzo-us-tax-scripts",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://www.ponylang.io/blog/2026/02/teaching-claude-to-write-pony/",
+        "date": "2026-03-06",
+        "title": "Teaching Claude to Write Pony",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://github.com/microsoft/CCF",
+        "date": "2026-03-07",
+        "title": "Microsoft CCF",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://github.com/cjen1",
+        "date": "2026-03-08",
+        "title": "cjen1 on GitHub",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://discuss.systems/@Cjen1",
+        "date": "2026-03-09",
+        "title": "Cjen1 on Mastodon",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://doi.org/10.1145/3341301.3359651",
+        "date": "2026-03-10",
+        "title": "I4 paper",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://doi.org/10.1145/2908080.2908118",
+        "date": "2026-03-11",
+        "title": "Ivy paper",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "linkdump",
+      "data": {
+        "url": "https://github.com/cjen1/cjen1.github.io",
+        "date": "2026-03-12",
+        "title": "This site",
+        "tags": [],
+        "notes": null
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/2026-02-25-panel-glue-ups.typ",
+        "title": "Wood panel glue ups",
+        "tags": "woodworking",
+        "author": "Cjen1",
+        "date": "2026-02-25"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/2026-02-25-tapestry-lawns.typ",
+        "title": "Tapestry Lawns",
+        "tags": [
+          "gardening",
+          "t-lawns"
+        ],
+        "author": "Cjen1",
+        "date": "2026-02-25"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/2026-03-02-uk-insurance.typ",
+        "title": "uk-insurance",
+        "tags": [],
+        "author": "",
+        "date": "2026-03-02"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/2026-03-02-usa-taxes.typ",
+        "title": "USA taxes",
+        "tags": [],
+        "author": "",
+        "date": "2026-03-02"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/2026-03-05-automerge.typ",
+        "title": "automerge",
+        "tags": [],
+        "author": "",
+        "date": "2026-03-05"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/ai/2026-03-21-alignment-skill.typ",
+        "title": "Using skills to maintain alignment",
+        "tags": "ai",
+        "author": "",
+        "date": "2026-03-21"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/ai/2026-03-21-alignment-skill.typ",
+        "to": "notes/ai/2026-03-21-skills.typ",
+        "relation": "transclude",
+        "mode": "inline"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/ai/2026-03-21-pony.typ",
+        "title": "Teaching CLAUDE.md",
+        "tags": "ai",
+        "author": "",
+        "date": "2026-03-21"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/ai/2026-03-21-skills.typ",
+        "title": "skills",
+        "tags": "ai",
+        "author": "",
+        "date": "2026-03-21"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/ai/index.typ",
+        "title": "AI usage",
+        "tags": [],
+        "author": "",
+        "date": "2026-03-21"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/ai/index.typ",
+        "to": "notes/ai/2026-03-21-pony.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/ai/index.typ",
+        "to": "notes/ai/2026-03-21-alignment-skill.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "notes/index.typ",
+        "title": "Random notes",
+        "tags": [],
+        "author": "Cjen1",
+        "date": "2026-02-25"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/index.typ",
+        "to": "notes/2026-03-05-automerge.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/index.typ",
+        "to": "notes/ai/index.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/index.typ",
+        "to": "notes/2026-02-25-tapestry-lawns.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/index.typ",
+        "to": "notes/2026-02-25-panel-glue-ups.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/index.typ",
+        "to": "notes/2026-03-02-uk-insurance.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "notes/index.typ",
+        "to": "notes/2026-03-02-usa-taxes.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "paper-reviews/2020-10-22-i4.typ",
+        "title": "I4: Incremental Inference of Inductive Invariants for Verification of Distributed Protocols",
+        "tags": [
+          "papers",
+          "distributed-systems",
+          "verification"
+        ],
+        "author": "Cjen1",
+        "date": "2020-10-22"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "paper-reviews/2020-10-27-ironfleet.typ",
+        "title": "Ironfleet: Proving Practical Distributed Systems Correct",
+        "tags": [
+          "papers",
+          "distributed-systems",
+          "verification"
+        ],
+        "author": "Cjen1",
+        "date": "2020-10-27"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "paper-reviews/index.typ",
+        "title": "Academic notes",
+        "tags": "papers",
+        "author": "Cjen1",
+        "date": "2020-10-22"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "paper-reviews/index.typ",
+        "to": "paper-reviews/2020-10-22-i4.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "paper-reviews/index.typ",
+        "to": "paper-reviews/2020-10-27-ironfleet.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "tools/2026-03-02-typst-knowledge-forests.typ",
+        "title": "typst-knowledge-forests",
+        "tags": [],
+        "author": "Cjen1",
+        "date": "2026-03-02"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "tools/2026-03-05-excali-present.typ",
+        "title": "Excali-Present",
+        "tags": [],
+        "author": "",
+        "date": "2026-03-05"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "tools/2026-03-05-excali-present.typ",
+        "to": "notes/2026-03-05-automerge.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "note",
+      "data": {
+        "id": "tools/index.typ",
+        "title": "Tools",
+        "tags": [],
+        "author": "",
+        "date": "2026-03-02"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "tools/index.typ",
+        "to": "tools/2026-03-02-typst-knowledge-forests.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  },
+  {
+    "func": "metadata",
+    "value": {
+      "schema": "tkf-meta-v1",
+      "kind": "edge",
+      "data": {
+        "from": "tools/index.typ",
+        "to": "tools/2026-03-05-excali-present.typ",
+        "relation": "transclude",
+        "mode": "title-link"
+      }
+    },
+    "label": "<tkf-meta>"
+  }
+]
