@@ -19,6 +19,7 @@
   #transclude("tools/index.typ", mode: "title-link")
   #transclude("notes/index.typ", mode: "title-link")
   #transclude("paper-reviews/index.typ", mode: "title-link")
+  #transclude("recipes/index.typ", mode: "title-link")
 
   #let dumped-links = (
     api.metadata
