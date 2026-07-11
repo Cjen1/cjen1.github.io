@@ -1,5 +1,5 @@
-#import "../tkf.typ": *
-#tkf-note(id: "notes/2026-07-10-generic-vs-structured.typ", title: "generic-vs-structured", tags: (), author: "", date: "2026-07-10", api => [
+#import "../../tkf.typ": *
+#tkf-note(id: "notes/ai/2026-07-10-generic-vs-structured.typ", title: "generic-vs-structured", tags: (), author: "", date: "2026-07-10", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 

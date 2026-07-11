@@ -12,5 +12,4 @@
   = Badmin things
   #transclude("2026-03-02-uk-insurance.typ", mode: "title-link")
   #transclude("2026-03-02-usa-taxes.typ", mode: "title-link")
-
 ])

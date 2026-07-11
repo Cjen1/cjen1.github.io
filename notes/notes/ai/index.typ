@@ -5,5 +5,6 @@
 
 #transclude("2026-03-21-pony.typ", mode: "title-link")
 #transclude("2026-03-21-alignment-skill.typ", mode: "title-link")
+#transclude("2026-03-21-generic-vs-structured.typ", mode: "title-link")
 
 ])

@@ -29,4 +29,5 @@
   #dump-link("https://doi.org/10.1145/3341301.3359651", "2026-03-10", title: "I4 paper")
   #dump-link("https://doi.org/10.1145/2908080.2908118", "2026-03-11", title: "Ivy paper")
   #dump-link("https://github.com/cjen1/cjen1.github.io", "2026-03-12", title: "This site")
+  #dump-link("https://danluu.com/ai-coding/", "2026-07-11", title: "Alignment as a benchmark problem")
 ])
