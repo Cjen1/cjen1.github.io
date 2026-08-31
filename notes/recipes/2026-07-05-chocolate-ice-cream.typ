@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#tkf-note(id: "recipes/2026-07-05-chocolate-ice-cream.typ", title: "Chocolate Ice Cream", tags: (), author: "", date: "2026-07-05", api => [
+#tkf-note(id: "recipes/2026-07-05-chocolate-ice-cream.typ", title: "Chocolate Ice Cream", tags: ("recipe",), author: "", date: "2026-07-05", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 

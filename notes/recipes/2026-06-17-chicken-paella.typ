@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#tkf-note(id: "recipes/2026-06-17-chicken-paella.typ", title: "chicken-paella", tags: (), author: "", date: "2026-06-17", api => [
+#tkf-note(id: "recipes/2026-06-17-chicken-paella.typ", title: "chicken-paella", tags: ("recipe",), author: "", date: "2026-06-17", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 

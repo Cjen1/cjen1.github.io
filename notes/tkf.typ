@@ -5,6 +5,7 @@
 //   #tkf-note(id, title, tags, author, date, body)    — Define a note (id auto-set by CLI)
 //   #notelink("../foo.typ", text: none)               — Link to another note (relative path)
 //   #transclude("../foo.typ", mode: "inline")         — Embed another note's content (relative path)
+//   #tag-index(("proof", "lemma"), "any")            — List tagged notes, newest first
 //     modes:
 //       "inline"       — Expand the note body in place (recursive, depth-limited)
 //       "title-link"   — Only writes the title of the linked article
@@ -59,10 +60,52 @@
   "/" + without-ext + ".html"
 }
 
+#let tags-match(note-tags, selector-tags, match) = {
+  if match == "any" {
+    selector-tags.any(tag => tag in note-tags)
+  } else {
+    selector-tags.all(tag => tag in note-tags)
+  }
+}
+
 #let tkf-meta(kind, data) = [#metadata((schema: "tkf-meta-v1", kind: kind, data: data))<tkf-meta>]
 
 #let tkf-edge(from, to, relation, mode: none) = {
   tkf-meta("edge", (from: from, to: to, relation: relation, mode: mode))
+}
+
+// Register a tag selector during query, then render its matching notes newest
+// first. The selector is also used to derive indexed-by navigation on each note.
+#let tag-index(tags, match) = {
+  if match != "any" and match != "all" {
+    panic("tag-index match must be either \"any\" or \"all\"")
+  }
+
+  if tkf-query-mode {
+    context {
+      let source = tkf-current-source.get()
+      if source == "" {
+        []
+      } else {
+        tkf-meta("tag-index", (source: source, tags: tags, match: match))
+      }
+    }
+  } else {
+    let notes = tkf-metadata
+      .filter(entry =>
+        entry.func == "metadata" and
+        entry.value.schema == "tkf-meta-v1" and
+        entry.value.kind == "note"
+      )
+      .map(entry => entry.value.data)
+      .filter(note => tags-match(note.at("tags", default: ()), tags, match))
+      .sorted(key: note => note.at("date", default: ""))
+      .rev()
+
+    for note in notes [
+      - #link(note-url(note.id))[#note.title]
+    ]
+  }
 }
 
 // Internal notelink that takes a canonical (resolved) ID.
@@ -154,15 +197,68 @@
       acc
     })
     let backlinks = backlink-map.pairs().map(pair => pair.first())
-    if backlinks.len() > 0 {
+
+    let current-notes = tkf-metadata.filter(entry =>
+      entry.func == "metadata" and
+      entry.value.schema == "tkf-meta-v1" and
+      entry.value.kind == "note" and
+      entry.value.data.id == id
+    )
+    let indexed-by = if current-notes.len() == 0 {
+      ()
+    } else {
+      let note-tags = current-notes.first().value.data.at("tags", default: ())
+      let index-map = tkf-metadata
+        .filter(entry =>
+          entry.func == "metadata" and
+          entry.value.schema == "tkf-meta-v1" and
+          entry.value.kind == "tag-index" and
+          entry.value.data.source != id
+        )
+        .filter(entry => tags-match(
+          note-tags,
+          entry.value.data.tags,
+          entry.value.data.match,
+        ))
+        .fold((:), (acc, entry) => {
+          acc.insert(entry.value.data.source, true)
+          acc
+        })
+      index-map.pairs().map(pair => pair.first())
+    }
+
+    if indexed-by.len() > 0 or backlinks.len() > 0 {
       html.elem("tkf-backlinks")[
-        #html.elem("tkf-backlinks-header")[Backlinks]
-        #html.elem("tkf-backlinks-list")[
-          #for source in backlinks {
-            html.elem("tkf-backlink-item")[
-              #tkf-notelink-canonical(source)
-            ]
-          }
+        #if indexed-by.len() > 0 [
+          #html.elem("tkf-backlinks-header")[Indexed by]
+          #html.elem("tkf-backlinks-list")[
+            #for source in indexed-by {
+              let source-notes = tkf-metadata.filter(entry =>
+                entry.func == "metadata" and
+                entry.value.schema == "tkf-meta-v1" and
+                entry.value.kind == "note" and
+                entry.value.data.id == source
+              )
+              let label = if source-notes.len() > 0 {
+                source-notes.first().value.data.title
+              } else {
+                source
+              }
+              html.elem("tkf-backlink-item")[
+                #tkf-notelink-canonical(source, text: label)
+              ]
+            }
+          ]
+        ]
+        #if backlinks.len() > 0 [
+          #html.elem("tkf-backlinks-header")[Backlinks]
+          #html.elem("tkf-backlinks-list")[
+            #for source in backlinks {
+              html.elem("tkf-backlink-item")[
+                #tkf-notelink-canonical(source)
+              ]
+            }
+          ]
         ]
       ]
     }
