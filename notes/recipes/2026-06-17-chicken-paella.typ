@@ -19,6 +19,12 @@
 - Prawn?
 - Chicken?
 
+- Smoked paprika: 2½–3 tsp
+- Turmeric: ¾ tsp
+- Black pepper: ½ tsp
+- Salt: 3 tsp fine salt to start
+- Optional chilli/cayenne: ¼–½ tsp
+
 == Method
 
 - Sweat the hards (carrots, celery)
