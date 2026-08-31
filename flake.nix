@@ -22,6 +22,7 @@
           buildInputs = [
             pkgs.typst
             pkgs.bashInteractive
+            pkgs.jq
             pkgs.github-copilot-cli
             tkf
           ];

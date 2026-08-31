@@ -1,0 +1,30 @@
+name: Validate knowledge forest
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build
+        run: nix develop --command tkf build
+
+      - name: Validate metadata
+        run: nix develop --command bash tests/validate-metadata.sh
+
+      - name: Test title-only transclusions
+        run: bash tests/title-only-transclude-click-target.sh

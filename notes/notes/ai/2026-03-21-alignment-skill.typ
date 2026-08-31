@@ -1,5 +1,5 @@
 #import "../../tkf.typ": *
-#tkf-note(id: "notes/ai/2026-03-21-alignment-skill.typ", title: "Using skills to maintain alignment", tags: ("ai"), author: "", date: "2026-03-21", api => [
+#tkf-note(id: "notes/ai/2026-03-21-alignment-skill.typ", title: "Using skills to maintain alignment", tags: ("ai",), author: "", date: "2026-03-21", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 
