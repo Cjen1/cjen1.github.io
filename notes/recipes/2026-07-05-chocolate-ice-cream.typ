@@ -3,18 +3,26 @@
 #let transclude = api.transclude
 #let notelink = api.notelink
 
-== Ingredients
-- 2 cans of coconut milk (15-17% fat try as high as possible) ~600-800g total
-- 85g golden syrup
-- 150g light brown sugar
-- 60g coco powder
-- 15g whiskey
-- 5g vanilla extract
-- 5g salt
+#let recipe = r => {
+  let mixture = r.act(
+    [Mix together in a blender],
+    r.ing(
+      [coconut milk],
+      "2 cans",
+      [\~600–800 g],
+      [15–17% fat, use the highest available],
+    ),
+    r.ing([golden syrup], "85 g"),
+    r.ing([light brown sugar], "150 g"),
+    r.ing([cocoa powder], "60 g"),
+    r.ing([whiskey], "15 g"),
+    r.ing([vanilla extract], "5 g"),
+    r.ing([salt], "5 g"),
+  )
+  let frozen = r.act([Freeze], mixture)
+  let churned = r.act([Blitz in an ice cream maker], frozen)
+  r.act([Freeze for at least an hour], churned)
+}
 
-== Method 
-- Mix together in blender
-- Freeze
-- Blitz in ice cream maker
-- Freeze for at least an hour
+#recipe_card(recipe)
 ])

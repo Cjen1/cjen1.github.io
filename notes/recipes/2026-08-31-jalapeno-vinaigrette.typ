@@ -3,15 +3,21 @@
 #let transclude = api.transclude
 #let notelink = api.notelink
 
-- 3tsp Pickled jalapeno slices
-- 2 scallions
-- 1 clove garlic
-- 3 tbsp lime juice (1 lime)
-- 1 tsp apple cider vinegar
-- 0.5 tsp honey
-- 0.5 tsp ground cumin
-- 0.5 tsp ancho chilli paste
-- 1 tsp salt
-- oilve oil to make an emulsion
+#let recipe = r => {
+  r.act(
+    [Blend until emulsified],
+    r.ing([pickled jalapeño slices], "3 tsp"),
+    r.ing([scallions], "2"),
+    r.ing([garlic], "1 clove"),
+    r.ing([lime juice], "3 tbsp", [\~1 lime]),
+    r.ing([apple cider vinegar], "1 tsp"),
+    r.ing([honey], "0.5 tsp"),
+    r.ing([ground cumin], "0.5 tsp"),
+    r.ing([ancho chilli paste], "0.5 tsp"),
+    r.ing([salt], "1 tsp"),
+    r.ing([olive oil], "?", [enough to make an emulsion]),
+  )
+}
 
+#recipe_card(recipe)
 ])
