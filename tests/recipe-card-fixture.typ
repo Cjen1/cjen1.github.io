@@ -1,4 +1,4 @@
-#import "../notes/tkf.typ": recipe_card
+#import "../runtime/recipe.typ": recipe_card
 
 #let example(name, recipe) = html.elem("recipe-example", attrs: (data-name: name))[
   #recipe_card(recipe)

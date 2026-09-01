@@ -1,4 +1,4 @@
-#import "../notes/tkf.typ": recipe_card
+#import "../runtime/recipe.typ": recipe_card
 
 #let recipe-case = sys.inputs.at("recipe-case")
 

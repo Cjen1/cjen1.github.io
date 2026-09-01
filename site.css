@@ -136,6 +136,78 @@ tkf-backlink-item {
   font-size: 0.875rem;
 }
 
+/* Recipe cards */
+recipe-card {
+  display: block;
+  position: relative;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  margin: 1.5rem 0;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  transform: translateX(-50%);
+  overscroll-behavior-inline: contain;
+}
+
+.recipe-card-table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  line-height: 1.35;
+}
+
+.recipe-card-table td {
+  vertical-align: middle;
+}
+
+.recipe-ingredient-name-cell,
+.recipe-ingredient-quantity-cell,
+.recipe-action-cell {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--tkf-border);
+}
+
+.recipe-ingredient-name-cell {
+  min-width: 7rem;
+  background: white;
+}
+
+.recipe-ingredient-quantity-cell {
+  min-width: 4.5rem;
+  background: white;
+  white-space: nowrap;
+}
+
+.recipe-action-cell {
+  min-width: 7rem;
+  background: var(--tkf-accent-light);
+  text-align: center;
+}
+
+recipe-ingredient-name,
+recipe-ingredient-quantity,
+recipe-action,
+recipe-ingredient-detail {
+  display: block;
+}
+
+recipe-ingredient-name,
+recipe-action {
+  font-weight: 600;
+}
+
+recipe-ingredient-detail {
+  margin-top: 0.15rem;
+  color: var(--tkf-accent);
+  font-size: 0.8rem;
+}
+
+.recipe-gap {
+  min-width: 2rem;
+  border: 0;
+}
+
 /* Lists */
 ul, ol {
   padding-left: 1.5rem;

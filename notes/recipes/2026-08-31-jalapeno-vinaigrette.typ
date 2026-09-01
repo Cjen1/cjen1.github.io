@@ -1,4 +1,5 @@
 #import "../tkf.typ": *
+#import "../../runtime/recipe.typ": recipe_card
 #tkf-note(id: "recipes/2026-08-31-jalapeno-vinaigrette.typ", title: "Jalapeno Vinaigrette", tags: ("recipe",), author: "Cjen1", date: "2026-08-31", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
