@@ -1,0 +1,3 @@
+[submodule "static/adelaide-running"]
+	path = static/adelaide-running
+	url = https://github.com/Cjen1/running-routes.git
