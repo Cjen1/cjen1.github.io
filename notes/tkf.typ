@@ -60,6 +60,13 @@
   "/" + without-ext + ".html"
 }
 
+// Paths are relative to the static/ directory and resolve from the site root.
+#let static-url(path) = "/" + path.trim("/", at: start)
+#let tkf-static-link(path, text: none) = {
+  let label = if text == none { path } else { text }
+  link(static-url(path))[#label]
+}
+
 #let tags-match(note-tags, selector-tags, match) = {
   if match == "any" {
     selector-tags.any(tag => tag in note-tags)
@@ -164,6 +171,7 @@
                         notelink: (target, ..args) => tkf-notelink-canonical(resolve-path(target-dir, target), ..args),
                         metadata: tkf-metadata,
                         manifest: tkf-manifest,
+                        static-link: tkf-static-link,
                       ))
                     }
                   ]
@@ -283,6 +291,7 @@
       notelink: (target, ..args) => tkf-notelink-canonical(resolve-path(dir, target), ..args),
       metadata: tkf-metadata,
       manifest: tkf-manifest,
+      static-link: tkf-static-link,
     ))
     tkf-current-source.update(_ => "")
   } else if id == tkf-root-id {
@@ -305,6 +314,7 @@
           notelink: (target, ..args) => tkf-notelink-canonical(resolve-path(dir, target), ..args),
           metadata: tkf-metadata,
           manifest: tkf-manifest,
+          static-link: tkf-static-link,
         ))
       }
       #tkf-backlinks(id)
