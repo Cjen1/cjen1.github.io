@@ -2,9 +2,10 @@
 
 ```
 tkf build
+bash tests/copy-static.sh
 ```
 
-Files in `static/` are copied into the root of `dist/` during `tkf build`.
+The second command copies `static/` into the root of `dist/`; both CI workflows run it after `tkf build` because the pinned `tkf` version does not include this step.
 For example, `static/apps/example/index.html` is served at `/apps/example/`.
 The `static/` directory is optional.
 
