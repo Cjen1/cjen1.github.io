@@ -2,10 +2,10 @@
 
 ```
 tkf build
-bash tests/copy-static.sh
+bash tests/validate-static.sh
 ```
 
-The second command copies `static/` into the root of `dist/`; both CI workflows run it after `tkf build` because the pinned `tkf` version does not include this step.
+`tkf build` copies `static/` into the root of `dist/`. The second command checks the running-route app is present and removes its copied submodule Git metadata; both CI workflows run it after the build.
 For example, `static/apps/example/index.html` is served at `/apps/example/`.
 The `static/` directory is optional.
 

@@ -24,8 +24,8 @@ jobs:
 
       - name: Build
         run: nix develop --command tkf build
-      - name: Copy static apps
-        run: bash tests/copy-static.sh
+      - name: Validate static app
+        run: bash tests/validate-static.sh
 
       - name: Validate metadata
         run: nix develop --command bash tests/validate-metadata.sh

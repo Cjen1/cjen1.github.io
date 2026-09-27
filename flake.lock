@@ -97,11 +97,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772497093,
-        "narHash": "sha256-dvWcpBkir1SMv04B/PKvXZBR05iWdLCZ7Zu9bq+Vv30=",
+        "lastModified": 1790515913,
+        "narHash": "sha256-w8pCn/kaKyy/AmL6vGMdzcbljuTAqf/JRjM9xbSb6dI=",
         "owner": "Cjen1",
         "repo": "typst-knowledge-forests",
-        "rev": "1feedca784bd9ea73b0658f4e2388997466e733a",
+        "rev": "930983c683c688d59e3538c5f521776430b7f9ba",
         "type": "github"
       },
       "original": {
