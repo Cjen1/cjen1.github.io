@@ -217,6 +217,42 @@ li + li {
   margin-top: 0.25rem;
 }
 
+/* Tables */
+table {
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+th, td {
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid var(--tkf-border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background: var(--tkf-accent-light);
+  font-weight: 600;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--tkf-bg-subtle);
+}
+
+@media (max-width: 480px) {
+  th, td {
+    padding: 0.5rem;
+  }
+}
+
 /* Code */
 code {
   font-family: ui-monospace, monospace;
