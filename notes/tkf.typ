@@ -86,40 +86,6 @@
   "WIP" not in note-tags and tags-match(note-tags, selector-tags, match)
 }
 
-// Register a tag selector during query, then render its matching notes newest
-// first. The selector is also used to derive indexed-by navigation on each note.
-#let tag-index(tags, match) = {
-  if match != "any" and match != "all" {
-    panic("tag-index match must be either \"any\" or \"all\"")
-  }
-
-  if tkf-query-mode {
-    context {
-      let source = tkf-current-source.get()
-      if source == "" {
-        []
-      } else {
-        tkf-meta("tag-index", (source: source, tags: tags, match: match))
-      }
-    }
-  } else {
-    let notes = tkf-metadata
-      .filter(entry =>
-        entry.func == "metadata" and
-        entry.value.schema == "tkf-meta-v1" and
-        entry.value.kind == "note"
-      )
-      .map(entry => entry.value.data)
-      .filter(note => index-tags-match(note.at("tags", default: ()), tags, match))
-      .sorted(key: note => note.at("date", default: ""))
-      .rev()
-
-    for note in notes [
-      - #link(note-url(note.id))[#note.title]
-    ]
-  }
-}
-
 // Internal notelink that takes a canonical (resolved) ID.
 #let tkf-notelink-canonical(id, text: none) = {
   let label = if text == none { id } else { text }
@@ -190,6 +156,40 @@
           }
         }
       }
+    ]
+  }
+}
+
+// Register a tag selector during query, then render its matching notes newest
+// first. The selector is also used to derive indexed-by navigation on each note.
+#let tag-index(tags, match) = {
+  if match != "any" and match != "all" {
+    panic("tag-index match must be either \"any\" or \"all\"")
+  }
+
+  if tkf-query-mode {
+    context {
+      let source = tkf-current-source.get()
+      if source == "" {
+        []
+      } else {
+        tkf-meta("tag-index", (source: source, tags: tags, match: match))
+      }
+    }
+  } else {
+    let notes = tkf-metadata
+      .filter(entry =>
+        entry.func == "metadata" and
+        entry.value.schema == "tkf-meta-v1" and
+        entry.value.kind == "note"
+      )
+      .map(entry => entry.value.data)
+      .filter(note => index-tags-match(note.at("tags", default: ()), tags, match))
+      .sorted(key: note => note.at("date", default: ""))
+      .rev()
+
+    for note in notes [
+      #tkf-transclude-canonical(note.id, mode: "title-link")
     ]
   }
 }
