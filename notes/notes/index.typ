@@ -2,17 +2,16 @@
 #tkf-note(id: "notes/index.typ", title: "Random notes", tags: (), author: "Cjen1", date: "2026-02-25", api => [
   #let transclude = api.transclude
   = Programming
-  #transclude("2026-03-05-automerge.typ", mode: "title-link")
+  #tag-index(("software-engineering", "crdt", "local-first"), "any")
   #transclude("ai/index.typ", mode: "title-link")
 
-  = Model checking
-  #transclude("2026-10-12-model-checking-symmetric-invariants.typ", mode: "title-link")
+  = Formal methods
+  #tag-index(("formal-methods",), "any")
 
   = Hobbies
   #transclude("2026-02-25-tapestry-lawns.typ", mode: "title-link")
   #transclude("2026-02-25-panel-glue-ups.typ", mode: "title-link")
 
   = Badmin things
-  #transclude("2026-03-02-uk-insurance.typ", mode: "title-link")
-  #transclude("2026-03-02-usa-taxes.typ", mode: "title-link")
+  #tag-index(("personal-admin",), "any")
 ])

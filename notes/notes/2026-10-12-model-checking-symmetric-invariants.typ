@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#tkf-note(id: "notes/2026-10-12-model-checking-symmetric-invariants.typ", title: "Conjecture: Inductive invariants are a symmetry reduction", tags: ("model-checking", "conjecture"), author: "", date: "2026-10-12", api => [
+#tkf-note(id: "notes/2026-10-12-model-checking-symmetric-invariants.typ", title: "Conjecture: Inductive invariants are a symmetry reduction", tags: ("model-checking", "conjecture", "formal-methods", "verification"), author: "", date: "2026-10-12", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 

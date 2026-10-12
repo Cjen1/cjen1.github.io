@@ -1,5 +1,5 @@
 #import "../tkf.typ": *
-#tkf-note(id: "notes/2026-10-12-model-checking-inductive-invariant.typ", title: "Inductive invariants for model checking", tags: ("model-checking", ), author: "", date: "2026-10-12", api => [
+#tkf-note(id: "notes/2026-10-12-model-checking-inductive-invariant.typ", title: "Inductive invariants for model checking", tags: ("model-checking", "formal-methods", "verification"), author: "", date: "2026-10-12", api => [
 #let transclude = api.transclude
 #let notelink = api.notelink
 

@@ -81,6 +81,11 @@
   tkf-meta("edge", (from: from, to: to, relation: relation, mode: mode))
 }
 
+// WIP notes remain available directly but do not appear in generated indices.
+#let index-tags-match(note-tags, selector-tags, match) = {
+  "WIP" not in note-tags and tags-match(note-tags, selector-tags, match)
+}
+
 // Register a tag selector during query, then render its matching notes newest
 // first. The selector is also used to derive indexed-by navigation on each note.
 #let tag-index(tags, match) = {
@@ -105,7 +110,7 @@
         entry.value.kind == "note"
       )
       .map(entry => entry.value.data)
-      .filter(note => tags-match(note.at("tags", default: ()), tags, match))
+      .filter(note => index-tags-match(note.at("tags", default: ()), tags, match))
       .sorted(key: note => note.at("date", default: ""))
       .rev()
 
@@ -223,7 +228,7 @@
           entry.value.kind == "tag-index" and
           entry.value.data.source != id
         )
-        .filter(entry => tags-match(
+        .filter(entry => index-tags-match(
           note-tags,
           entry.value.data.tags,
           entry.value.data.match,
